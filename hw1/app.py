@@ -1,5 +1,4 @@
 from typing import Any, Awaitable, Callable
-from http import HTTPStatus
 
 async def application(
     scope: dict[str, Any],
