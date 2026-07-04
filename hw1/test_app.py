@@ -83,6 +83,7 @@ async def test_fibonacci(params: str, status_code: int):
 async def test_mean(json: dict[str, Any] | None, status_code: int):
     async with TestClient(app) as client:
         response = await client.get("/mean", json=json)
+        print(response)
 
     assert response.status_code == status_code
     if status_code == HTTPStatus.OK:
